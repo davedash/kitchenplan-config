@@ -1,5 +1,6 @@
 recipes:
     mac_os_x:
+        # - applications::slack
         - osxdefaults::menu_add_battery_percentage
         - osxdefaults::set_computer_name
 attributes:
@@ -9,6 +10,8 @@ attributes:
         apps:
             - git-extras
             - hub
+            - python
+            - ack
         cask_apps:
             - onepassword
             - dropbox
@@ -16,11 +19,15 @@ attributes:
             - sonos
             - iterm2
             - day-o
+            - pycharm
+            - slack
+            - hipchat
     authorization:
       sudo:
         users:
           - davedash
         passwordless: true
+        include_sudoers_d: true
 
     dotfiles:
         vim:
